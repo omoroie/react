@@ -1,63 +1,32 @@
-/*eslint-disable*/
+/*eslint-disable*/  
+import React from 'react';
+import {Routes, Route, Link} from 'react-router-dom';
 
-import { useState } from 'react';
-import './App.css';
+import Home from "./pages/Home"; // import 함수명 from 경로.파일명
+import About from "./pages/About";
+import Counter from './pages/Counter';
+import Input from './pages/Input';
+import Input2 from './pages/Input2';
 
 function App() {
 
-  // document.querySelector('h4').innerHTML = post; 기존의 html에서 사용하던 방법 h4 태그에 포스트 제목 삽입
-  let [name, namechange] = useState(['남자 코드 추천', '여자 코트 추천', '남자 옷 추천']); // useState를 사용하여 포스트 제목을 상태로 관리
-  let [like, likechange] = useState(0);
-
-
   return (
     <div className="App">
-      <div className="blog-header">
-        <h4>Myblog</h4>
-      </div>
-      <div className="list">
-        <h4>{name[0]} <span onClick={ ()=>{ likechange(like+1) } }>좋아요👍</span> {like} </h4><br />
-        <p>2월 17일 발행</p></div>
-
-      <div className="list">
-        <h4>{name[1]}</h4>
-        <p>2월 17일 발행</p>
-
-        <button onClick={ () => {
-          let copy = [...name];
-          copy[0] = '여자 코트 추천';
-          namechange(copy);
-         } }>버튼</button>
-
-        </div>
-
-        <div className="list">
-        <h4>{name[2]}</h4>
-        <p>2월 17일 발행</p>
-
-        <button onClick={ () => {
-          let copy1 = [...name];
-          copy.sort();  // 이름 순으로 정렬렬
-          namechange(copy);
-        }}>정렬</button>
-        </div>
-    
-        <Modal/>
+      <nav>
+        <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/counter">Counter</Link> | <Link to="/input">Input</Link> | 
+        <Link to="/input2">Input2</Link>
+        
+      </nav>
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/input" element={<Input />} />
+        <Route path="/input2" element={<Input2 />} />
+      </Routes>
       </div>
   );
-}
+};
 
-
-function Modal() {
-  return (
-    <>
-    <div className="modal">
-      <h4>제목</h4>
-      <p>날짜</p>
-      <p>상세내용</p>
-      <button>닫기</button></div>
-      <div></div>
-      </>
-  )
-}
 export default App;
