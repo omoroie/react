@@ -1,0 +1,16 @@
+/* Footer.css */
+
+/* 스타일링할 div 태그 */
+.footer-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+/* 텍스트 스타일링 */
+.footer-text {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
+}

@@ -1,32 +1,28 @@
-/*eslint-disable*/  
-import React from 'react';
-import {Routes, Route, Link} from 'react-router-dom';
-
-import Home from "./pages/Home"; // import 함수명 from 경로.파일명
-import About from "./pages/About";
-import Counter from './pages/Counter';
-import Input from './pages/Input';
-import Input2 from './pages/Input2';
+import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+import Header from './components/Header'
+import BoardPage from './pages/BoardPage'
+import NotFound from './pages/NotFound'
+import Footer from './components/Footer'
+import PostDetail from './pages/PostDetail'
+import './css/App.css'
 
 function App() {
 
   return (
-    <div className="App">
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/counter">Counter</Link> | <Link to="/input">Input</Link> | 
-        <Link to="/input2">Input2</Link>
-        
-      </nav>
-      
+    <div>
+      <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/input" element={<Input />} />
-        <Route path="/input2" element={<Input2 />} />
-      </Routes>
-      </div>
-  );
-};
+         {/* 게시판 목록 페이지 */}
+        <Route path="/board/:boardType" element={<BoardPage />} />
 
-export default App;
+        {/* ✅ 게시글 상세 페이지 */}
+        <Route path="/board/:boardType/:postId" element={<PostDetail />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </div>
+  )
+}
+
+export default App
