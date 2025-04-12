@@ -1,10 +1,19 @@
 export const mockPosts = [
     {
       id: 1,
-      boardType: "free",
-      title: "자유롭게 첫 글 올려요",
-      author: "홍길동",
-      date: "2024-04-10"
+      boardType: 'free',
+      title: '첫 번째 글',
+      author: '홍길동',
+      date: '2025-04-12',
+      content: '이곳에 본문 내용이 들어갑니다.',
+      likes: 10,
+      dislikes: 2,
+      views: 99,
+      tags: ['React', 'AWS'],
+      comments: [
+        { id: 1, content: '좋은 글이네요!' },
+        { id: 2, content: '감사합니다~' },
+      ]
     },
     {
         id: 2,

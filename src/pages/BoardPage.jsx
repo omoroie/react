@@ -39,7 +39,7 @@ function BoardPage() {
                 작성자: {post.author} | 날짜: {post.date}
                 </div>
                 <div className="post-stats">
-                ❤️ {post.likes} / 👎 {post.dislikes} / 💬 {post.comments} / 👁️ {post.views}
+                👍 {post.likes} / 👎 {post.dislikes} / 💬 {post.comments?.length ?? 0} / 👁️ {post.views}
                 </div>
                 <div className="post-tags">
                 {post.tags && post.tags.map(tag => (

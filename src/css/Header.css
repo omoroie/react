@@ -38,12 +38,15 @@
     margin-right: 2px;
   }
 
-  /* 우측 유저 메뉴 */
+  /* ✅ 유저 메뉴 */
   .user-menu {
     font-size: 15px;
-    letter-spacing: 0.3px;  /* 글자 간격 */
     color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
+
   
   /* 게시판 메뉴 (아래 탭 형식) */
   .board-menu {
@@ -72,7 +75,37 @@
     box-shadow: 0 1px 6px rgba(0, 119, 204, 0.2); /* 부드러운 그림자 */
     transform: translateY(-1px); /* 살짝 위로 떠오르는 느낌 */
   }
+
+  .board-link.active {
+    background-color: var(--hover-bg);
+    color: var(--hover-blue);
+    font-weight: 600;
+    box-shadow: 0 1px 6px rgba(0, 119, 204, 0.2); /* 부드러운 그림자 */
+    transform: translateY(-1px); /* 살짝 위로 떠오르는 느낌 */
+  }
   
+  .login-link,
+  .logout-button,
+  .mypage-link {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-blue);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+
+  .login-link:hover,
+  .logout-button:hover,
+  .mypage-link:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-blue);
+  }
+
   
   /* ✅ 반응형 미디어 쿼리 */
 @media (max-width: 768px) {
@@ -93,5 +126,9 @@
       font-size: 14px;
       gap: 8px;
       padding: 10px 16px;
+    }
+
+    .logout-button, .login-link {
+      font-size: 13px;
     }
 }

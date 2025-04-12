@@ -19,10 +19,12 @@
   }
   
   .post-item {
-    margin-bottom: 16px;
-    padding: 10px;
-    border-radius: 6px;
-    transition: background-color 0.2s;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    min-height: 80px; /* 이미지 높이와 일치 */
   }
   
   .post-item:hover {
@@ -67,9 +69,19 @@
     width: 80px;
     height: 80px;
     object-fit: cover;
-    margin-right: 12px;
-    float: left;
     border-radius: 6px;
+  }
+  
+  .post-thumbnail.placeholder {
+    background-color: #f0f0f0;
+  }
+  
+  .thumbnail-wrapper {
+    flex-shrink: 0;
+  }
+  
+  .post-content {
+    flex-grow: 1;
   }
   
   .tag {
