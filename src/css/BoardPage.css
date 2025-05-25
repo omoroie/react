@@ -1,0 +1,96 @@
+.board-page {
+    padding: 24px;
+  }
+  
+  .board-title {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  
+  .board-desc {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .post-list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .post-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    min-height: 80px; /* 이미지 높이와 일치 */
+  }
+  
+  .post-item:hover {
+    background-color: #f1faff;
+  }
+  
+  .post-title {
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .post-title:hover {
+    color: #00aaff;
+    text-decoration: underline;
+  }
+  
+  .post-meta {
+    font-size: 13px;
+    color: #999;
+    margin-top: 4px;
+  }
+  
+  .post-stats {
+    font-size: 13px;
+    color: #555;
+    margin-top: 4px;
+  }
+  
+  .write-button {
+    display: inline-block;
+    margin-top: 40px;
+    background: #00aaff;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  
+  .post-thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .post-thumbnail.placeholder {
+    background-color: #f0f0f0;
+  }
+  
+  .thumbnail-wrapper {
+    flex-shrink: 0;
+  }
+  
+  .post-content {
+    flex-grow: 1;
+  }
+  
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    color: #00aaff;
+    background-color: #e6f7ff;
+    padding: 2px 6px;
+    margin-right: 6px;
+    border-radius: 4px;
+  }
+  

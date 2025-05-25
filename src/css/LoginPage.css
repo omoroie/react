@@ -1,0 +1,74 @@
+.login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Pretendard', sans-serif;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .login-form input {
+    padding: 14px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .button-group button {
+    flex: 1;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--primary-blue, #00aaff);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .button-group button:hover {
+    background-color: var(--hover-blue, #0077cc);
+  }
+  
+  .social-login {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .sns-button {
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .sns-button.kakao {
+    background-color: #fee500;
+    color: #381e1f;
+  }
+  
+  .sns-button.google {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #333;
+  }
+  
